@@ -1,0 +1,135 @@
+.ECLanding {
+  width: 100vw;
+  height: 110vh;
+  flex-shrink: 0;
+  background-color: #5929e0;
+  mix-blend-mode: screen;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.bkbtn_EC {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  position: fixed;
+  float: left;
+  top: 1.2rem;
+  left: 1.25rem;
+}
+.Landing_pc_EC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main_pc_EC {
+  margin-top: 8vh;
+  max-width: 95vw;
+  width: 95%;
+  height: auto;
+}
+
+.Landing_activity_info_EC {
+  position: relative;
+  top: 3rem;
+  color: var(--Light-Light--80, #e0e7f1);
+  font-family: Gilroy;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  text-decoration-line: underline;
+}
+
+.activity_info_EC {
+  margin-top: -35px;
+}
+
+.Landing_buttons_EC {
+  position: fixed;
+  bottom: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.Landing_start_EC {
+  width: 13.625rem;
+  min-width: 52.76vw;
+  display: flex;
+  width: 13.625rem;
+  padding: 0.9375rem 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 2.625rem;
+  border: 1px solid var(--Dark-Dark--100, #0e1928);
+  background: var(--Primary-Primary-100, #c6ff00);
+  box-shadow: 1px 1px 0px 0px #0e1928;
+  color: var(--Neutral-Rich-Dark, #090909);
+  font-family: Gilroy;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 0.875rem */
+}
+
+.Landing_activity_EC {
+  width: 13.625rem;
+  min-width: 52.76vw;
+  display: flex;
+  width: 13.6875rem;
+  padding: 0.9375rem 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 1.9375rem;
+  border: 1px solid var(--Light-Light--100, #fff);
+  background: transparent;
+  color: var(--Light-Light--100, #fff);
+  font-family: Gilroy;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 0.875rem */
+}
+.lanmargintop_EC{
+  width: 75vw;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+
+@media (max-height: 750px) {
+  .lanmargintop_EC{
+    width: 70vw;
+    margin-bottom: 2rem;
+    margin-top: 3vh;
+  }
+}
+@media ((min-height: 750px) and (max-height: 799px)) {
+  .lanmargintop_EC{
+    width: 75vw;
+    margin-bottom: 2rem;
+    margin-top: 5vh;
+  }
+}
+@media (min-height: 799px)  and (max-height: 850px) {
+  .lanmargintop_EC{
+    width: 80vw;
+    margin-bottom: 2rem;
+    margin-top: 3vh;
+  }
+}
+@media (min-height: 850px)  and (max-height: 950px) {
+  .lanmargintop_EC{
+    width: 80vw;
+    margin-bottom: 2rem;
+    margin-top: 3vh;
+  }
+}
