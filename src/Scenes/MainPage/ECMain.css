@@ -1,0 +1,262 @@
+.EC_Main_Act {
+  background-color: var(--Dark-Dark--100, #0e1928);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+.EC_Main_svg1 {
+  position: fixed;
+  top: -7vh;
+  width: 22rem;
+  height: 21.0625rem;
+  flex-shrink: 0;
+  stroke-width: 19px;
+  stroke: var(--Dark-Dark--90, #1d2939);
+  z-index: 2;
+}
+.backbtnEC {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: fixed;
+  float: left;
+  top: 2.4rem;
+  left: 1.25rem;
+  z-index: 3;
+}
+.EC_act_Main_wyb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  height: 5rem;
+  position: relative;
+  margin-top: 1rem;
+  z-index: 3;
+}
+.EC_Main_Head {
+  color: var(--Accent-Accent--03-Accent-03, #fbff08);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Saira SemiCondensed";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  z-index: 2;
+}
+
+
+.EC_Text_Area {
+  width: 89.5vw;
+  height: 22vh;
+  margin-top: 2.8rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  padding-top: 2vh;
+  border-radius: var(--large, 0.75rem);
+  background: var(--Accent-Accent--01-Accent-01--Dark, #5929e0);
+  z-index: 2;
+  position: relative;
+}
+
+.EC_Text_Area_svg1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.EC_Text_Hint {
+  display: flex;
+  box-sizing: border-box;
+  width: 82vw;
+  height: 5.2vh;
+  padding: 1.2vh;
+  align-items: center;
+  gap: var(--medium, 0.625rem);
+  flex-shrink: 0;
+  color: var(--Light-Alpha-Light-Alphat--60, rgba(255, 255, 255, 0.6));
+  font-family: Gilroy;
+  border-radius: 0.5rem;
+  font-size: 1.74vh;
+  border: 1px solid
+    var(--Light-Alpha-Light-Alphat--40, rgba(255, 255, 255, 0.4));
+  background-color: var(--Accent-Accent--01-Accent-01--Dark, #5929e0);
+  z-index: 4;
+}
+
+.EC_Text_Hint::placeholder {
+  color: var(--Light-Alpha-Light-Alphat--60, rgba(255, 255, 255, 0.6));
+  font-family: Gilroy;
+  /* font-size: 0.875rem; */
+  font-size: 1.74vh;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.EC_Text_Hint:focus {
+  outline: none;
+  font-size: 1.74vh;
+  color: var(--Light-Alpha-Light-Alphat--60, rgba(255, 255, 255, 0.6));
+  font-family: Gilroy;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Primary-Primary-100, #c6ff00);
+  background: var(--Accent-Accent--01-Accent-01--Dark, #5929e0);
+}
+
+.EC_Emoji_Area {
+  color: var(--Light-Alpha-Light-Alphat--60, rgba(255, 255, 255, 0.6));
+  font-family: Gilroy;
+  display: flex;
+  box-sizing: border-box;
+  width: 82vw;
+  height: 8vh;
+  padding: var(--medium, 0.625rem);
+  padding-top: 1.2rem;
+  align-items: center;
+  gap: var(--medium, 0.625rem);
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  border: 1px solid
+    var(--Light-Alpha-Light-Alphat--40, rgba(255, 255, 255, 0.4));
+  background: var(--Accent-Accent--01-Accent-01--Dark, #5929e0);
+}
+.EC_Emoji_Area:focus {
+  outline: none;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Primary-Primary-100, #c6ff00);
+  background: var(--Accent-Accent--01-Accent-01--Dark, #5929e0);
+}
+
+.EC_Emoji_Area::placeholder {
+  color: var(--Light-Alpha-Light-Alphat--60, rgba(255, 255, 255, 0.6));
+  font-family: Gilroy;
+  /* font-size: 0.875rem; */
+  font-size: 1.74vh;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.EC_Answer_Area {
+  width: 89.5vw;
+  height: 6.2vh;
+  margin-top: 1rem;
+  box-sizing: border-box;
+  padding: 1.5vh;
+  font-size: 1.74vh;
+  border-radius: var(--large, 0.75rem);
+  border: 1px solid var(--Dark-Dark--60, #526175);
+  background: var(--Dark-Dark--100, #0e1928);
+  color: var(--Light-Alpha-Light-Alphat--40, rgba(255, 255, 255, 0.4));
+  font-family: Gilroy;
+  z-index: 2;
+}
+.EC_Answer_Area::placeholder {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.EC_Answer_Area:focus {
+  outline: none;
+}
+
+.EC_Suggest_AI {
+  position: absolute;
+  top: 3.5vh;
+  right: 2vw;
+  display: inline-flex;
+  padding: 0.375rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 1.875rem;
+  background: linear-gradient(
+    276deg,
+    #ff5af9 -9.92%,
+    #ff5af9 14.14%,
+    #5929e0 49.66%,
+    #33f5f5 101.22%
+  );
+}
+.EC_Suggest_AI span {
+  color: var(--Light-Light--100, #fff);
+  font-family: Gilroy;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.0625rem;
+}
+.msg_Area_EC {
+  position: relative;
+  margin-top: 6vh;
+}
+.profile_icon_EC {
+  position: absolute;
+  height: 6vh;
+  top: -1.8vh;
+  left: -6.5vw;
+}
+.EC_Msg_Note {
+  width: 75vw;
+  height: 7vh;
+  flex-shrink: 0;
+  font-size: 1.74vh;
+  box-sizing: border-box;
+  padding-left: 9vw;
+  padding-top: 1.4vh;
+  border: 0px;
+  border-radius: 0.125rem var(--large, 0.75rem) var(--large, 0.75rem)
+    var(--large, 0.75rem);
+  background: var(--Dark-Dark--70, #384353);
+  color: var(--Dark-Dark--50, #79889d);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Gilroy;
+}
+.EC_Msg_Note::placeholder {
+  color: var(--Dark-Dark--50, #79889d);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Gilroy;
+  font-size: 1.74vh;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 1.05rem */
+}
+.EC_Msg_Note:focus {
+  outline: none;
+}
+
+.Send_btn_EC {
+  position: fixed;
+  bottom: 8vh;
+  display: flex;
+  width: 9.5rem;
+  height: 2.875rem;
+  padding: 1rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+  flex-shrink: 0;
+  border-radius: var(--x-Large, 62.4375rem);
+  border: 1px solid var(--Dark-Dark--100, #0e1928);
+  background: var(--Primary-Primary-100, #c6ff00);
+  box-shadow: 1px 1px 0px 0px #0e1928;
+}
+.Send_btn_EC_txt {
+  color: var(--Neutral-Rich-Dark, #090909);
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem; /* 142.857% */
+}
