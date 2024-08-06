@@ -10,6 +10,24 @@ const ECProvider = ({ children }) => {
   const [sendNote,setSendNote] = useState('');
 
 
+
+    const handleSuggestEC = async () => {
+      try {
+        const response = await fetch("https://vyld-cb-dev-api.vyld.io/api/v1/activity-games?name=emoji_charades");
+        const res = await response.json();
+        const topics = Object.keys(res.data.result);
+        const rndtop = topics[Math.floor(Math.random()*3)];
+        const SuggestionOpt= res.data.result[rndtop];
+        const SuggestionOptLen = SuggestionOpt.length;
+        const finalSuggestion =  SuggestionOpt[Math.floor(Math.random()*SuggestionOptLen)]
+        setSendAns(finalSuggestion.text);
+        setSendEmojie(finalSuggestion.options[Math.floor(Math.random()*2)].data);
+        setSendHint(rndtop);
+      } catch (error) {
+        console.error("Error fetching grid letters:", error);
+      }
+    };
+
   const handleHintChange = (event) => {
     let value = event.target.value;
     if (value.length > 55) {
@@ -72,6 +90,7 @@ const ECProvider = ({ children }) => {
         handleEmojieChange,
         handleHintChange,
         handleNoteChange,
+        handleSuggestEC,
       }}
     >
       {children}
