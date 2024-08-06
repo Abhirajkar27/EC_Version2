@@ -10,6 +10,53 @@ const ECProvider = ({ children }) => {
   const [sendNote,setSendNote] = useState('');
 
 
+  const handleHintChange = (event) => {
+    let value = event.target.value;
+    if (value.length > 55) {
+      value = value.slice(0, 55); 
+    }
+    const lineCount = value.split('\n').length;
+    if (lineCount <= 4) {
+      const trimmedValue = value.replace(/^\s+/g, '');
+      setSendHint(trimmedValue);
+    }
+  };
+  const handleAnsChange = (event) => {
+    let value = event.target.value;
+    if (value.length > 55) {
+      value = value.slice(0, 55); 
+    }
+    const lineCount = value.split('\n').length;
+    if (lineCount <= 4) {
+      const trimmedValue = value.replace(/^\s+/g, '');
+      setSendAns(trimmedValue);
+    }
+  };
+  const handleNoteChange = (event) => {
+    let value = event.target.value;
+    if (value.length > 55) {
+      value = value.slice(0, 55); 
+    }
+    const lineCount = value.split('\n').length;
+    if (lineCount <= 4) {
+      const trimmedValue = value.replace(/^\s+/g, '');
+      setSendNote(trimmedValue);
+    }
+  };
+
+  const handleEmojieChange = (event) => {
+    let value = event.target.value;
+    if (value.length > 155) {
+      value = value.slice(0, 155); 
+    }
+    const lineCount = value.split('\n').length;
+    if (lineCount <= 4) {
+      const trimmedValue = value.replace(/^\s+/g, '');
+      setSendEmojie(trimmedValue);
+    }
+  };
+
+
   return (
     <ECContext.Provider
       value={{
@@ -21,6 +68,10 @@ const ECProvider = ({ children }) => {
         setSendHint,
         sendNote,
         setSendNote,
+        handleAnsChange,
+        handleEmojieChange,
+        handleHintChange,
+        handleNoteChange,
       }}
     >
       {children}
