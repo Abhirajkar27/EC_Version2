@@ -117,11 +117,11 @@
   box-sizing: border-box;
   width: 82vw;
   height: 8vh;
+  font-size: 2rem;
   padding: var(--medium, 0.625rem);
-  padding-top: 1.2rem;
   align-items: center;
-  gap: var(--medium, 0.625rem);
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
+  letter-spacing: 0.5rem;
   border-radius: 0.5rem;
   border: 1px solid
     var(--Light-Alpha-Light-Alphat--40, rgba(255, 255, 255, 0.4));
@@ -139,7 +139,9 @@
 .EC_Emoji_Area::placeholder {
   color: var(--Light-Alpha-Light-Alphat--60, rgba(255, 255, 255, 0.6));
   font-family: Gilroy;
+  letter-spacing: 0;
   /* font-size: 0.875rem; */
+  padding-top: 1.4vh;
   font-size: 1.74vh;
   font-style: normal;
   font-weight: 500;
@@ -259,6 +261,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 1.25rem; /* 142.857% */
+  transition: color ease-in-out 1s;
 }
 
 .Send_btn_EC_faded {
@@ -273,5 +276,5 @@
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.25rem; /* 142.857% */
+  line-height: 1.25rem;
 }

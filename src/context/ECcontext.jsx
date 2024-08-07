@@ -64,8 +64,8 @@ const ECProvider = ({ children }) => {
 
   const handleEmojieChange = (event) => {
     let value = event.target.value;
-    if (value.length > 155) {
-      value = value.slice(0, 155); 
+    if (value.length > 24) {
+      value = value.slice(0, 24); 
     }
     const lineCount = value.split('\n').length;
     if (lineCount <= 4) {
