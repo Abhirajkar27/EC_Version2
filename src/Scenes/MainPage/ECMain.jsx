@@ -37,17 +37,18 @@ const ECMain = (props) => {
   useEffect(() => {
     if (emojiInputRef.current) {
       emojiInputRef.current.textContent = sendEmojie;
-      setCursorToEnd(emojiInputRef.current);
+      if(track!=0){setCursorToEnd(emojiInputRef.current);}
     }
   }, [sendEmojie, track]);
 
   const handleEmojiChange = (e) => {
+    setTrack(track + 1);
     if (e.currentTarget.textContent.length > 24) {
-      setTrack(track + 1);
+     
       console.log("hey can do more");
       console.log(sendEmojie);
     } else {
-      setTrack(track + 1);
+      
       let value = e.currentTarget.textContent;
       if (value.length > 24) {
         value = value.slice(0, 24);
@@ -66,6 +67,7 @@ const ECMain = (props) => {
 
 
   const handleFocus = () => {
+    setTrack(track + 1);
     emojiInputRef.current.removeAttribute('data-placeholder');
   };
 

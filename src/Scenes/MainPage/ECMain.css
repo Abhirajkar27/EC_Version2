@@ -126,6 +126,7 @@
   overflow: scroll;
   overflow-y: auto; /* Add scroll for overflow */
   word-wrap: break-word;
+  vertical-align:middle;
 }
 
 .EC_Emoji_Area:focus {
