@@ -17,6 +17,7 @@
   font-weight: 800;
   line-height: 120%;
   z-index: 2;
+  margin-top: .65vh;
 }
 
 .EC_OWC_tp_SubHead {
@@ -35,7 +36,7 @@
 .EC_OWC_Area {
   width: 89.5vw;
   height: 22vh;
-  margin-top: 2.8rem;
+  margin-top: 2.5vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
