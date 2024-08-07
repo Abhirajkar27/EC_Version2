@@ -1,0 +1,114 @@
+.EC_OWC_Act {
+  background-color: var(--Dark-Dark--100, #0e1928);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+.EC_OWC_Head {
+  color: var(--Accent-Accent--03-Accent-03, #fbff08);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Saira SemiCondensed";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  z-index: 2;
+}
+
+.EC_OWC_tp_SubHead {
+  margin-top: 18vh;
+  color: var(--Accent-Accent--03-Accent-03, #fbff08);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Saira SemiCondensed";
+  font-size: 1.22819rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 1.47388rem */
+  z-index: 2;
+}
+
+.EC_OWC_Area {
+  width: 89.5vw;
+  height: 22vh;
+  margin-top: 2.8rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  padding-top: 2vh;
+  border-radius: var(--large, 0.75rem);
+  background: var(--Accent-Accent--01-Accent-01--Dark, #5929e0);
+  z-index: 2;
+  position: relative;
+}
+
+.EC_OWC_Area_svg1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.EC_OWC_svg1 {
+  margin-top: 2vh;
+}
+
+.LowerBtn-OWC_EC {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 7vh;
+  gap: 1.2rem;
+}
+.Lower-Btn_OWC1 {
+  display: flex;
+  width: 9.5rem;
+  height: 2.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+  flex-shrink: 0;
+  border-radius: var(--x-Large, 62.4375rem);
+  border: 1px solid var(--Light-Light--100, #fff);
+  background: transparent;
+}
+
+.Lower-Btn_OWC1 span {
+  color: var(--Light-Light--100, #fff);
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem; /* 142.857% */
+}
+
+.Lower-Btn_OWC2 {
+  display: flex;
+  width: 9.5rem;
+  height: 2.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+  flex-shrink: 0;
+  border-radius: var(--x-Large, 62.4375rem);
+  border: 1px solid var(--Dark-Dark--100, #0e1928);
+  background: var(--Primary-Primary-100, #c6ff00);
+  box-shadow: 1px 1px 0px 0px #0e1928;
+}
+.Lower-Btn_OWC2 span {
+  color: var(--Neutral-Rich-Dark, #090909);
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem; /* 142.857% */
+}

@@ -4,6 +4,7 @@ import "./App.css";
 import ECLanding from "./Scenes/Landing/ECLanding";
 import ECMain from "./Scenes/MainPage/ECMain";
 import { ECProvider } from "./context/ECcontext";
+import OwnChat from "./Scenes/Disclose/OwnChat";
 
 
 function App() {
@@ -15,6 +16,11 @@ function App() {
     case 0:
       content = <ECMain
         onClose={() => { setIndex(null); }}
+        onforw={() => { setIndex(1) }} />;
+      break;
+    case 1:
+      content = <OwnChat
+        onClose={() => { setIndex(0); }}
         onforw={() => { setIndex(1) }} />;
       break;
     default:

@@ -37,18 +37,18 @@ const ECMain = (props) => {
   useEffect(() => {
     if (emojiInputRef.current) {
       emojiInputRef.current.textContent = sendEmojie;
-      if(track!=0){setCursorToEnd(emojiInputRef.current);}
+      if (track != 0) { setCursorToEnd(emojiInputRef.current); }
     }
   }, [sendEmojie, track]);
 
   const handleEmojiChange = (e) => {
     setTrack(track + 1);
     if (e.currentTarget.textContent.length > 24) {
-     
+
       console.log("hey can do more");
       console.log(sendEmojie);
     } else {
-      
+
       let value = e.currentTarget.textContent;
       if (value.length > 24) {
         value = value.slice(0, 24);
@@ -171,7 +171,8 @@ you send'
           onChange={handleNoteChange}
         >
         </textarea></div>
-      <button className={`${sendAns && sendEmojie && sendHint ? '' : 'Send_btn_EC_faded '}Send_btn_EC`}><span className='Send_btn_EC_txt'>Send</span></button>
+      <button onClick={sendAns && sendEmojie && sendHint ? props.onforw : null}
+        className={`${sendAns && sendEmojie && sendHint ? '' : 'Send_btn_EC_faded '}Send_btn_EC`}><span className='Send_btn_EC_txt'>Send</span></button>
     </div>
   )
 }
