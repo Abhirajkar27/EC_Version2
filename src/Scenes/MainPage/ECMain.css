@@ -160,14 +160,16 @@
   border-radius: var(--large, 0.75rem);
   border: 1px solid var(--Dark-Dark--60, #526175);
   background: var(--Dark-Dark--100, #0e1928);
-  color: var(--Light-Alpha-Light-Alphat--40, rgba(255, 255, 255, 0.4));
-  font-family: Gilroy;
   z-index: 2;
+  color: var(--Light-Light--100, #FFF);
+font-family: Gilroy;
 }
 .EC_Answer_Area::placeholder {
   font-style: normal;
   font-weight: 500;
   line-height: 1.25rem;
+  color: var(--Light-Alpha-Light-Alphat--40, rgba(255, 255, 255, 0.4));
+  font-family: Gilroy;
 }
 .EC_Answer_Area:focus {
   outline: none;
