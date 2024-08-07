@@ -64,6 +64,7 @@ const ECProvider = ({ children }) => {
 
   const handleEmojieChange = (event) => {
     let value = event.target.value;
+    console.log(value);
     if (value.length > 24) {
       value = value.slice(0, 24); 
     }
