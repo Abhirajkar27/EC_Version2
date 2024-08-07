@@ -58,6 +58,44 @@
   margin-top: 2vh;
 }
 
+.EC_topic_OWC {
+  margin-top: 1.5vh;
+  display: flex;
+  padding: 0.1875rem var(--medium, 0.625rem);
+  justify-content: center;
+  align-items: center;
+  gap: var(--medium, 0.625rem);
+  border-radius: 1.875rem;
+  background: var(--Light-Light--100, #fff);
+}
+.EC_topic_OWC span {
+  color: var(--Dark-Dark--80, #273343);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Gilroy;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 0.75rem */
+}
+
+.EC_EMojie_OWC {
+  display: flex;
+  /* height: 3.28731rem; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.2725rem;
+  flex-shrink: 0;
+  letter-spacing: .65rem;
+  font-size: 2.2rem;
+}
+/* .EC_EMojie_OWC span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
 .LowerBtn-OWC_EC {
   display: flex;
   flex-direction: row;
