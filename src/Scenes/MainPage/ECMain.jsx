@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { ECContext } from '../../context/ECcontext'
 import profilPic from '../../assets/img/Profile avatar.png';
 import './ECMain.css';
@@ -9,7 +9,7 @@ const ECMain = (props) => {
     sendHint,
     sendNote,
     handleAnsChange,
-    handleEmojieChange,
+    setSendEmojie,
     handleHintChange,
     handleNoteChange,
     handleSuggestEC,
@@ -17,18 +17,42 @@ const ECMain = (props) => {
 
     
     const textareaRef = useRef(null);
+    const [track, setTrack] = useState(0);
   
     // const handleFocus = () => {
     //   if (emojiInputRef.current) {
     //     emojiInputRef.current.focus();
     //   }
     // };
+    const setCursorToEnd = (element) => {
+      const range = document.createRange();
+      const selection = window.getSelection();
+      range.selectNodeContents(element);
+      range.collapse(false);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      element.focus();
+    };
+    
+    useEffect(() => {
+      if (emojiInputRef.current) {
+        emojiInputRef.current.textContent = sendEmojie;
+        setCursorToEnd(emojiInputRef.current);
+      }
+    }, [sendEmojie, track]);
+  
     const handleEmojiChange = (e) => {
-      handleEmojieChange({
-        target: {
-          value: e.currentTarget.textContent,
-        },
-      });
+      setTrack(track+1);
+      console.log(track);
+      let value = e.currentTarget.textContent;
+      if (value.length > 24) {
+        value = value.slice(0, 24);
+      }
+      const lineCount = value.split('\n').length;
+      if (lineCount <= 4) {
+        const trimmedValue = value.replace(/^\s+/g, '');
+        setSendEmojie(trimmedValue);
+      }
     };
     
 
