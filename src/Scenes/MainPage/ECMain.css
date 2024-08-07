@@ -75,8 +75,8 @@
   display: flex;
   box-sizing: border-box;
   width: 82vw;
-  height: 5.2vh;
-  padding: 1.2vh;
+  height: 5.25vh;
+  padding: 1.3vh;
   align-items: center;
   gap: var(--medium, 0.625rem);
   flex-shrink: 0;
@@ -116,16 +116,17 @@
   display: flex;
   box-sizing: border-box;
   width: 82vw;
-  height: 8vh;
+  height: 11vh;
   font-size: 2rem;
-  padding: var(--medium, 0.625rem);
+  /* padding: var(--medium, 0.625rem); */
   align-items: center;
   /* flex-shrink: 0; */
   letter-spacing: 0.5rem;
+  overflow: visible;
   border-radius: 0.5rem;
   border: 1px solid
     var(--Light-Alpha-Light-Alphat--40, rgba(255, 255, 255, 0.4));
-  background: var(--Accent-Accent--01-Accent-01--Dark, #5929e0);
+  background-color: var(--Accent-Accent--01-Accent-01--Dark, #5929e0);
 }
 .EC_Emoji_Area:focus {
   outline: none;
@@ -141,7 +142,8 @@
   font-family: Gilroy;
   letter-spacing: 0;
   /* font-size: 0.875rem; */
-  padding-top: 1.4vh;
+  padding-top: 3.8vh;
+  padding-left: 2vw;
   font-size: 1.74vh;
   font-style: normal;
   font-weight: 500;
@@ -150,10 +152,10 @@
 
 .EC_Answer_Area {
   width: 89.5vw;
-  height: 6.2vh;
+  height: 6.35vh;
   margin-top: 1rem;
   box-sizing: border-box;
-  padding: 1.5vh;
+  padding: 1.87vh;
   font-size: 1.74vh;
   border-radius: var(--large, 0.75rem);
   border: 1px solid var(--Dark-Dark--60, #526175);
