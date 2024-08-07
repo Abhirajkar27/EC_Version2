@@ -12,16 +12,25 @@ const ECMain = (props) => {
     handleEmojieChange,
     handleHintChange,
     handleNoteChange,
-    handleSuggestEC } = useContext(ECContext);
+    handleSuggestEC,
+  emojiInputRef } = useContext(ECContext);
 
-    const emojiInputRef = useRef(null);
+    
     const textareaRef = useRef(null);
   
-    const handleFocus = () => {
-      if (emojiInputRef.current) {
-        emojiInputRef.current.focus();
-      }
+    // const handleFocus = () => {
+    //   if (emojiInputRef.current) {
+    //     emojiInputRef.current.focus();
+    //   }
+    // };
+    const handleEmojiChange = (e) => {
+      handleEmojieChange({
+        target: {
+          value: e.currentTarget.textContent,
+        },
+      });
     };
+    
 
   return (
     <div className='EC_Main_Act'>
@@ -72,12 +81,10 @@ const ECMain = (props) => {
         <div
           className='EC_Emoji_Area'
           contentEditable
-          placeholder='Enter Emoji'
-          value={sendAns}
           ref={emojiInputRef}
-          onChange={handleEmojieChange}
+          onInput={handleEmojiChange}
           data-placeholder='Enter Emoji'
-        >{sendEmojie || ''}</div>
+        ></div>
       </div>
       <div style={{ position: "relative", width: "fit-content" }}>
         <textarea
@@ -86,7 +93,6 @@ const ECMain = (props) => {
           className="EC_Answer_Area"
           inputMode='text'
           ref={textareaRef}
-          onFocus={handleFocus}
           value={sendAns}
           onChange={handleAnsChange}
         />

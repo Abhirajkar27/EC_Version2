@@ -123,6 +123,7 @@
   background-color: #5929e0;
   color: rgba(255, 255, 255);
   padding-left: .5rem; 
+  overflow: scroll;
 }
 
 .EC_Emoji_Area:focus {

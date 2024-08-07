@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useRef, useState } from "react";
 
 const ECContext = createContext();
 
@@ -8,6 +8,7 @@ const ECProvider = ({ children }) => {
   const [sendEmojie,setSendEmojie] = useState('');
   const [sendAns,setSendAns] = useState('');
   const [sendNote,setSendNote] = useState('');
+  const emojiInputRef = useRef(null);
 
 
 
@@ -21,7 +22,11 @@ const ECProvider = ({ children }) => {
         const SuggestionOptLen = SuggestionOpt.length;
         const finalSuggestion =  SuggestionOpt[Math.floor(Math.random()*SuggestionOptLen)]
         setSendAns(finalSuggestion.text);
-        setSendEmojie(finalSuggestion.options[Math.floor(Math.random()*2)].data);
+        // setSendEmojie(finalSuggestion.options[Math.floor(Math.random()*2)].data);
+        if (emojiInputRef.current) {
+          emojiInputRef.current.focus();
+          document.execCommand('insertText', false, finalSuggestion.options[Math.floor(Math.random()*2)].data);
+        }
         setSendHint(rndtop);
       } catch (error) {
         console.error("Error fetching grid letters:", error);
@@ -63,6 +68,8 @@ const ECProvider = ({ children }) => {
   };
 
   const handleEmojieChange = (event) => {
+    // event.preventDefault();
+    console.log("I am changing", sendEmojie);
     let value = event.target.value;
     console.log(value);
     if (value.length > 24) {
@@ -92,6 +99,7 @@ const ECProvider = ({ children }) => {
         handleHintChange,
         handleNoteChange,
         handleSuggestEC,
+        emojiInputRef,
       }}
     >
       {children}
