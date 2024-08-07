@@ -65,6 +65,17 @@ const ECMain = (props) => {
   };
 
 
+  const handleFocus = () => {
+    emojiInputRef.current.removeAttribute('data-placeholder');
+  };
+
+  const handleBlur = () => {
+    if (emojiInputRef.current.innerText.trim() === '') {
+      emojiInputRef.current.setAttribute('data-placeholder', 'Enter Emoji');
+    }
+  };
+
+
   return (
     <div className='EC_Main_Act'>
       <svg className='EC_Main_svg1' xmlns="http://www.w3.org/2000/svg" width="360" height="250" viewBox="0 0 360 250" fill="none">
@@ -116,6 +127,8 @@ const ECMain = (props) => {
           contentEditable
           ref={emojiInputRef}
           onInput={handleEmojiChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           data-placeholder='Enter Emoji'
         ></div>
       </div>
