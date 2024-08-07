@@ -13,37 +13,41 @@ const ECMain = (props) => {
     handleHintChange,
     handleNoteChange,
     handleSuggestEC,
-  emojiInputRef } = useContext(ECContext);
+    emojiInputRef } = useContext(ECContext);
 
-    
-    const textareaRef = useRef(null);
-    const [track, setTrack] = useState(0);
-  
-    // const handleFocus = () => {
-    //   if (emojiInputRef.current) {
-    //     emojiInputRef.current.focus();
-    //   }
-    // };
-    const setCursorToEnd = (element) => {
-      const range = document.createRange();
-      const selection = window.getSelection();
-      range.selectNodeContents(element);
-      range.collapse(false);
-      selection.removeAllRanges();
-      selection.addRange(range);
-      element.focus();
-    };
-    
-    useEffect(() => {
-      if (emojiInputRef.current) {
-        emojiInputRef.current.textContent = sendEmojie;
-        setCursorToEnd(emojiInputRef.current);
-      }
-    }, [sendEmojie, track]);
-  
-    const handleEmojiChange = (e) => {
-      setTrack(track+1);
-      console.log(track);
+
+  const textareaRef = useRef(null);
+  const [track, setTrack] = useState(0);
+
+  // const handleFocus = () => {
+  //   if (emojiInputRef.current) {
+  //     emojiInputRef.current.focus();
+  //   }
+  // };
+  const setCursorToEnd = (element) => {
+    const range = document.createRange();
+    const selection = window.getSelection();
+    range.selectNodeContents(element);
+    range.collapse(false);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    element.focus();
+  };
+
+  useEffect(() => {
+    if (emojiInputRef.current) {
+      emojiInputRef.current.textContent = sendEmojie;
+      setCursorToEnd(emojiInputRef.current);
+    }
+  }, [sendEmojie, track]);
+
+  const handleEmojiChange = (e) => {
+    if (e.currentTarget.textContent.length > 24) {
+      setTrack(track + 1);
+      console.log("hey can do more");
+      console.log(sendEmojie);
+    } else {
+      setTrack(track + 1);
       let value = e.currentTarget.textContent;
       if (value.length > 24) {
         value = value.slice(0, 24);
@@ -51,10 +55,15 @@ const ECMain = (props) => {
       const lineCount = value.split('\n').length;
       if (lineCount <= 4) {
         const trimmedValue = value.replace(/^\s+/g, '');
+        if (e.currentTarget.textContent.length > 24) {
+          console.log("still coming");
+        }
         setSendEmojie(trimmedValue);
       }
-    };
-    
+    }
+
+  };
+
 
   return (
     <div className='EC_Main_Act'>
