@@ -161,8 +161,8 @@
   border: 1px solid var(--Dark-Dark--60, #526175);
   background: var(--Dark-Dark--100, #0e1928);
   z-index: 2;
-  color: var(--Light-Light--100, #FFF);
-font-family: Gilroy;
+  color: var(--Light-Light--100, #fff);
+  font-family: Gilroy;
 }
 .EC_Answer_Area::placeholder {
   font-style: normal;
@@ -273,7 +273,7 @@ font-family: Gilroy;
   background: var(--Dark-Dark--70, #384353);
 }
 
-.Send_btn_EC_faded .Send_btn_EC_txt{
+.Send_btn_EC_faded .Send_btn_EC_txt {
   color: var(--Dark-Dark--60, #526175);
   text-align: center;
   font-family: Gilroy;
