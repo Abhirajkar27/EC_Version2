@@ -133,7 +133,6 @@
 
 .EC_Emoji_Area:focus {
   text-align: center;
-  /* vertical-align: middle; */
   outline: none;
   border: 1px solid #c6ff00;
 }

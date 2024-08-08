@@ -156,7 +156,7 @@ const ECMain = (props) => {
               </clipPath>
             </defs>
           </svg>
-          <span>Suggest</span>
+          {!(sendAns || sendEmojie || sendHint) && <span>Suggest</span>}
         </div>
       </div>
       <div className='msg_Area_EC'>
