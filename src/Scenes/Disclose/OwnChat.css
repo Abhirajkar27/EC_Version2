@@ -55,9 +55,16 @@
   left: 0;
   z-index: 3;
 }
-.EC_OWC_svg1 {
-  margin-top: 2vh;
+.EC_OWC_Area_svg2{
+  position: absolute;
+  top: 4vh;
+  right: 10vw;
+  z-index: 3;
 }
+
+/* .EC_OWC_svg1 {
+  margin-top: 2vh;
+} */
 
 .EC_topic_OWC {
   margin-top: 1.5vh;
