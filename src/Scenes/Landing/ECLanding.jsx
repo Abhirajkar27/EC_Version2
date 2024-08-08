@@ -14,6 +14,10 @@ const ECLanding = (props) => {
         return () => clearTimeout(timer);
     }, []);
 
+    const handlePlayClick = () => {
+        window.location.href = "https://emoji-charades2.netlify.app/?activityId=66a220794e0607d46772fcbd";
+      };
+
     return (
         <div className='ECLanding'>
             {loading && <div className="loading-spinner"></div>}
@@ -31,8 +35,8 @@ const ECLanding = (props) => {
                 <p className='Landing_activity_info_EC' onClick={() => { setISShowActivityInfo(true); }}>Activity info</p>
             </div>}
             <div className={`Landing_buttons_EC`}>
-                <button className="Landing_start_EC" onClick={props.onNext}>Start</button>
-                <button className="Landing_activity_EC">Challenge Others</button>
+                <button className="Landing_start_EC" onClick={handlePlayClick}>Start</button>
+                <button className="Landing_activity_EC" onClick={props.onNext}>Challenge Others</button>
             </div></>}
         </div>
     )
