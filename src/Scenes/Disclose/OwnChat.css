@@ -158,3 +158,49 @@
   font-weight: 700;
   line-height: 1.25rem; /* 142.857% */
 }
+
+/* Animation Starts here */
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.EC_OWC_Head {
+  animation: slideInFromTop 0.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.15s;
+}
+
+.EC_OWC_tp_SubHead {
+  animation: slideInFromTop 0.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.35s;
+}
+
+.EC_OWC_Area {
+  animation: slideInFromTop 0.9s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+.EC_topic_OWC {
+  animation: slideInFromTop 0.9s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.65s;
+}
+
+.LowerBtn-OWC_EC {
+  animation: slideInFromTop 0.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+
+
+/* Animation Ends Here */
