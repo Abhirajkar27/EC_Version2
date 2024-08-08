@@ -329,6 +329,17 @@
   opacity: 0;
   animation-delay: 0.8s;
 }
+.EC_Suggest_AI{
+  animation: fancyAnimation 2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+
+.msg_Area_EC{
+  animation: fancyAnimation 2.1s linear forwards;
+  opacity: 0;
+  animation-delay: 0.9s;
+}
 
 .Send_btn_EC {
   animation: fancyAnimation 2.2s ease-out forwards;
