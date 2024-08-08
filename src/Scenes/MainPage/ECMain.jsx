@@ -25,6 +25,7 @@ const ECMain = (props) => {
   //   }
   // };
   const setCursorToEnd = (element) => {
+    console.log("hi i am working")
     const range = document.createRange();
     const selection = window.getSelection();
     range.selectNodeContents(element);
@@ -37,14 +38,13 @@ const ECMain = (props) => {
   useEffect(() => {
     if (emojiInputRef.current) {
       emojiInputRef.current.textContent = sendEmojie;
-      if (track != 0) { setCursorToEnd(emojiInputRef.current); }
+      // if (track != 0) { setCursorToEnd(emojiInputRef.current); }
     }
   }, [sendEmojie, track]);
 
   const handleEmojiChange = (e) => {
     setTrack(track + 1);
     if (e.currentTarget.textContent.length > 24) {
-
       console.log("hey can do more");
       console.log(sendEmojie);
     } else {
@@ -62,7 +62,6 @@ const ECMain = (props) => {
         setSendEmojie(trimmedValue);
       }
     }
-
   };
 
 
