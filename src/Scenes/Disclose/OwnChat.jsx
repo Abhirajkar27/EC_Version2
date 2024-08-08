@@ -3,8 +3,7 @@ import './OwnChat.css';
 import { ECContext } from '../../context/ECcontext';
 
 const OwnChat = (props) => {
-    const { sendAns, sendEmojie, sendHint, sendNote } = useContext(ECContext);
-    let historyStack = [];
+    const { sendAns, sendEmojie, sendHint, sendNote, historyStack, setHistoryStack } = useContext(ECContext);
     async function handleForwarsActivity() {
         const data = {
             type: "Emoji_charades",
@@ -43,7 +42,7 @@ const OwnChat = (props) => {
                 console.log("data", responseData);
                 const activityId = responseData.data.activityId;
                 console.log('Activity ID:', activityId);
-                historyStack.push(dataString);
+                setHistoryStack([...historyStack, dataString]);
                 if (historyStack.length > 15) {
                     historyStack.shift();
                 }

@@ -9,6 +9,8 @@ const ECProvider = ({ children }) => {
   const [sendAns,setSendAns] = useState('');
   const [sendNote,setSendNote] = useState('');
   const emojiInputRef = useRef(null);
+  const [historyStack,setHistoryStack] = useState([]);
+  // let  = [];
 
 
 
@@ -98,6 +100,8 @@ const ECProvider = ({ children }) => {
         handleNoteChange,
         handleSuggestEC,
         emojiInputRef,
+        historyStack,
+        setHistoryStack
       }}
     >
       {children}
