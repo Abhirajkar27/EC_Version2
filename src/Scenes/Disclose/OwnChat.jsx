@@ -1,13 +1,60 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext } from 'react';
 import './OwnChat.css';
 import { ECContext } from '../../context/ECcontext';
 
 const OwnChat = (props) => {
-
-    const {
-        sendEmojie,
-        sendHint, } = useContext(ECContext);
-
+    const { sendAns, sendEmojie, sendHint, sendNote } = useContext(ECContext);
+    let historyStack = [];
+    async function handleForwarsActivity() {
+        const data = {
+            type: "Emoji_charades",
+            ActD: {
+                reqD: [
+                    { topicArea: sendHint },
+                    { topic: sendAns },
+                    { Emoji: sendEmojie },
+                ],
+                message: sendNote,
+            }
+        };
+        const dataString = JSON.stringify(data);
+        console.log("Sending Data", dataString);
+        // Check if the current data is the same as the most recent unique data
+        if (historyStack.length > 0 && historyStack[historyStack.length - 1] === dataString) {
+            window.alert("Data has not changed. No new challenge created.");
+            return;
+        }
+        // Check if the current data has been sent before (not just the most recent)
+        if (historyStack.includes(dataString)) {
+            window.alert("Data was sent earlier. No new challenge created.");
+            return;
+        }
+        console.log("Sending Data", dataString);
+        try {
+            const response = await fetch('https://vyld-cb-dev-api.vyld.io/api/v1/activity-games/game', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: dataString,
+            });
+            if (response.ok) {
+                const responseData = await response.json();
+                console.log("data", responseData);
+                const activityId = responseData.data.activityId;
+                console.log('Activity ID:', activityId);
+                historyStack.push(dataString);
+                if (historyStack.length > 15) {
+                    historyStack.shift();
+                }
+            } else {
+                console.error('Failed to send data', response.statusText);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+        window.alert("Challenge Created!!");
+    }
 
     return (
         <div className='EC_OWC_Act'>
@@ -69,7 +116,7 @@ const OwnChat = (props) => {
             </div>
             <div className='LowerBtn-OWC_EC'>
                 <button className='Lower-Btn_OWC1'><span>Close</span></button>
-                <button className='Lower-Btn_OWC2'><span>Challenge friends!</span></button>
+                <button className='Lower-Btn_OWC2' onClick={handleForwarsActivity}><span>Challenge friends!</span></button>
             </div>
         </div>
     )
