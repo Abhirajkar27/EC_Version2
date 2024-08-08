@@ -188,6 +188,8 @@
     #5929e0 49.66%,
     #33f5f5 101.22%
   );
+  width: 4rem;
+  transition: width ease-in-out .41s;
 }
 .EC_Suggest_AI span {
   color: var(--Light-Light--100, #fff);
@@ -197,6 +199,12 @@
   font-weight: 600;
   line-height: 1.0625rem;
 }
+
+.EC_Suggest_AI.collapsed {
+  width: 1rem; 
+}
+
+
 .msg_Area_EC {
   position: relative;
   margin-top: 6vh;

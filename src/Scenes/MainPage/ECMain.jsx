@@ -143,7 +143,7 @@ const ECMain = (props) => {
           value={sendAns}
           onChange={handleAnsChange}
         />
-        <div onClick={handleSuggestEC} className='EC_Suggest_AI'>
+        <div onClick={handleSuggestEC} className={`EC_Suggest_AI ${!(sendAns || sendEmojie || sendHint) ? '' : 'collapsed'}`}>
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
             <g clip-path="url(#clip0_1447_21131)">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M4.43338 4.34591C4.38738 4.14358 4.20749 4 4 4C3.79251 4 3.61262 4.14358 3.56662 4.34591L3.15604 6.15153C3.04231 6.65171 2.65171 7.04231 2.15153 7.15604L0.345889 7.56662C0.143578 7.61262 0 7.79251 0 8C0 8.20749 0.143578 8.38738 0.345889 8.43338L2.15153 8.84396C2.65171 8.95769 3.04231 9.34829 3.15604 9.84847L3.56662 11.6541C3.61262 11.8564 3.79251 12 4 12C4.20749 12 4.38738 11.8564 4.43338 11.6541L4.84396 9.84847C4.95769 9.34829 5.34829 8.95769 5.84847 8.84396L7.65411 8.43338C7.85642 8.38738 8 8.20749 8 8C8 7.79251 7.85642 7.61262 7.65411 7.56662L5.84847 7.15604C5.34829 7.04231 4.95769 6.65171 4.84396 6.15153L4.43338 4.34591Z" fill="white" />
