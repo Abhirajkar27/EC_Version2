@@ -19,6 +19,16 @@ const ECMain = (props) => {
   const textareaRef = useRef(null);
   const [track, setTrack] = useState(0);
 
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500); 
+    return () => clearTimeout(timer);
+  }, []);
+
   // const handleFocus = () => {
   //   if (emojiInputRef.current) {
   //     emojiInputRef.current.focus();
@@ -79,6 +89,8 @@ const ECMain = (props) => {
 
   return (
     <div className='EC_Main_Act'>
+      {loading && <div className="loading-spinner"></div>}
+      {!loading && <>
       <svg className='EC_Main_svg1' xmlns="http://www.w3.org/2000/svg" width="360" height="250" viewBox="0 0 360 250" fill="none">
         <path d="M-12 -97C16.3333 -95.3333 137.593 89.8627 95 62.5C12.5 9.5 -5.5 80.5 43.5 108.5C108 145.357 218.245 240 144 240C95 240 113 137.5 191.5 159.5C270 181.5 313.387 225.588 336.5 172.5C368.5 99 257.5 52 311 -23C360.614 -92.5529 388 -32 388 0.5" stroke="#1D2939" stroke-width="19" />
       </svg>
@@ -172,6 +184,7 @@ you send'
         </textarea></div>
       <button onClick={sendAns && sendEmojie && sendHint ? props.onforw : null}
         className={`${sendAns && sendEmojie && sendHint ? '' : 'Send_btn_EC_faded '}Send_btn_EC`}><span className='Send_btn_EC_txt'>Send</span></button>
+        </>}
     </div>
   )
 }
