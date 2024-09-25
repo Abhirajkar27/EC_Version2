@@ -15,7 +15,7 @@ const ECLanding = (props) => {
     }, []);
 
     const handlePlayClick = () => {
-        window.location.href = "https://emoji-charades2.netlify.app/?activityId=66b49cbb6b9e8fd57ca870e4";
+        window.location.href = "https://emoji-charades2.netlify.app";
       };
 
     return (
